@@ -4,48 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVC Collection</title>
+    <title>Good Game Store</title>
 
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/cede744d7f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="blob blob-top"></div>
-    <div class="blob blob-bottom"></div>
-    <div id="blur"></div>
-    <header>
+    <aside>
         <div class="logo">
-            <h1>MVC Collection</h1>
+            <h2>GOOD GAMES</h2>
         </div>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">Kids</a>
-        </div>
-        <div class="cta">
-            <i class="fas fa-search"></i>
-            <i class="far fa-heart"></i>
-            <i class="fas fa-shopping-cart"></i>
-            <i class="far fa-user"></i>
-        </div>
-    </header>
-    <main>
-        <div class="title">
-            <h1>New Collection <span>Chuck Taylor All Star</span></h1>
-        </div>
-        <div class="container">
-            <aside class="left"></aside>
-            <div class="content">
-                <button>See More</button>
+        <menu>
+            <button>Go to catalog</button>
+            <div class="nav-menu">
+                <i class="fas fa-user"></i>
+                <p>Profile</p>
             </div>
-            <aside class="right"></aside>
-        </div>
-        <div class="credit">
-            <p>
-                design by: <a href="https://www.behance.net/maksim_alt05ed">@Maksim Althukov</a> | coded by: <a href="github.com/khairnsaa">@khairunnisaas</a>
-            </p>
-        </div>
+            <div class="nav-menu">
+                <i class="fas fa-user"></i>
+                <p>Profile</p>
+            </div>
+            <div class="nav-menu">
+                <i class="fas fa-user"></i>
+                <p>Profile</p>
+            </div>
+            <div class="nav-menu">
+                <i class="fas fa-user"></i>
+                <p>Profile</p>
+            </div>
+            <div class="nav-menu">
+                <i class="fas fa-user"></i>
+                <p>Profile</p>
+            </div>
+        </menu>
+    </aside>
+    <main>
+        <header>
+            <div class="left-nav">
+                <input type="text" placeholder="search" id="search">
+            </div>
+            <nav class="right-nav">
+                <p>Alex Jhonson</p>
+                <div class="profile-pic">
+                    <img src="https://pbs.twimg.com/media/FhC3LvHXkAEMEUZ.png" alt="profile pic">
+                </div>
+                <i class="far fa-bell"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </nav>
+        </header>
+        <section class="hero">
+            <div class="left-side"></div>
+            <div class="right-side">
+                <div class="text">
+                    <h2>New reality</h2>
+                    <h1>New impre<span>ssions</span></h1>
+                    <p>Wear VR helmet and start new battles</p>
+                    <button>Go to catalog</button>
+                </div>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="./assets/oculus 1.png" alt="item 1">
+                        </div>
+                        <div class="card-body">
+                            <h3>Oculus Quest</h3>
+                            <p>VR Glasses</p>
+                            <p class="price">129.50$</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="./assets/oculus 2.png" alt="item 2">
+                        </div>
+                        <div class="card-body">
+                            <h3>Oculus Rift</h3>
+                            <p>VR Glasses</p>
+                            <p class="price">129.50$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
