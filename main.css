@@ -1,154 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap');
-
-:root{
-    --primary: #FFF7E8;
-    --yellow: #F3B848;
-    --red: #D85841;
-    --green: #1C4931;
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    font-family: 'Mulish', sans-serif;
-    background-color: var(--primary);
+  }
+  
+  body{
+    background-image: linear-gradient(to right, #F7F6F0 , #D9DAE1);
     font-size: 16px;
-}
-
-header, section{ display: grid; }
-
-header{
-    grid-template-columns: 1fr 1fr 2fr 1fr 0.5fr;
-    padding: 1.5rem 3rem;
-}
-
-.logo{
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
-a{
-    color: black;
-    text-decoration: none;
-}
-
-menu{
-    display: flex;
-    flex-direction: column;
-}
-
-menu a{font-weight: 600;}
-
-menu a.split{ max-width: 9rem;}
-
-section{
-    grid-template-columns: 1.5fr 1fr 1fr;
-}
-
-.title, .side-content{
-    display: flex;
-    padding: 0 2rem;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 5rem;
-}
-
-.title h1{ 
-    font-size: 4rem;
-    font-weight: 800;
-}
-
-.subtitle{
+  }
+  
+  header, nav{
     display: flex;
     justify-content: space-between;
-    margin: 1rem 0;
-    padding: 1rem 0;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.11);
-}
-
-.subtitle a{ font-weight: 700;}
-
-
-.image{
-    background:linear-gradient(to left, var(--yellow), var(--yellow)) no-repeat center 5rem;
-}
-
-.side-content h3{
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.signature{
-    font-weight: 700;
-    margin-top: 1rem;
-}
-
-.featured{
-    background-color: var(--red);
-    color: white;
-    display: flex;
-    padding: 5rem 3rem;
-}
-
-.image-featured-wrapper img{ 
-    width: 10rem;
-    height: 10rem;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 2rem;
-    padding: 1rem;
-    border: 0.2rem solid white;
-}
-
-.register, .view-all{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-.register p{
-    max-width: 10rem;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: 600;
-}
-
-.view-all{
-    background-color: var(--green);
-    color: white;
-}
-
-.wrapper{
-    border: 0.01rem solid rgba(255, 255, 255, 0.342);
+  }
+  
+  header{
+    margin: 1rem 3rem;
     padding: 1rem;
-}
-
-.view-all h2{ font-size: 3rem;}
-
-.view-all p{
-    max-width: 12rem;
-    margin: 0.5rem auto;
-    font-weight: 400;
-    font-size: 1.1rem;
-}
-
-.view-all a{
+    border-bottom: 0.1rem solid black;
+  }
+  
+  header nav{
+    width: 20vw;
+  }
+  
+  header nav menu:nth-child(2), .icon{
+    padding: 0 2rem;
+    border-left: 0.1rem solid black;
+    border-right: 0.1rem solid black;
+  }
+  
+  
+  section{
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
+  
+  .title{
+    grid-column: 1/3;
+    padding: 3rem;
+    position: relative;
+  }
+  
+  .title h1{
+    font-size: 5rem;
+    text-align: center;
+    max-width: 75vw;
+    margin: auto;
+    text-transform: uppercase;
+  }
+  
+  span{
     display: inline-block;
+    width: 7rem;
+  }
+  
+  span img{
+    width: 100%;
+  }
+  
+  button{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 1rem;
     color: white;
-    margin-top: 1rem;
-}
+    background-color: black;
+  }
+  
+  button:hover{
+    cursor: pointer;
+  }
+  
+  aside{
+    padding-right: 10rem;
+    grid-column: 1/2;
+  }
+  
+  aside menu{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid black;
+    padding: 1rem 2rem;
+    margin: 0.2rem auto;
+  }
 
-
-/* width */
-::-webkit-scrollbar {
-    width: 0.4rem;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #D85841; 
-}
+  .fa-long-arrow-alt-right{ transform: rotate(-30deg);}
+  
+  aside menu:hover{ cursor: pointer; }
+  
+  aside menu:last-child{ border: none; }
+  
+  article{
+    grid-column:2/3;
+  }
+  
+  article p{
+    max-width: 65%;
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+  
+  footer{
+    background-color: black;
+    color: white;
+    padding: 2rem;
+  }
