@@ -1,58 +1,158 @@
+:root{
+  --text: #C8C8C9;
+  --primary: #121517;
+  --secondary: #0EC678;
+}
+
+@font-face {
+  font-family: 'TT Travels';
+  src:  url('./assets/fonts/TT\ Travels\ Next\ Regular.ttf') format('truetype')
+}
+
 *{
   margin: 0;
   padding: 0;
-  box-sizing: boder-box;
+  box-sizing: border-box;
 }
 
+
 body{
-  font-size: 16px;
-  background-color: #FFFBF7;
-  height: 100vh;
-  overflow: hidden;
+  background-color: var(--primary);
+  font-family: 'TT Travels', sans-serif;
+  color: var(--text);
+  padding: 0 4rem;
+}
+
+header, nav, main{ display: flex;}
+
+header{
+  padding: 2rem 0;
+  align-items: center;
+}
+
+.logo{
+  margin-right: 2rem;
+  padding-right: 0.5rem;
+  font-style: italic;
+  background: -webkit-linear-gradient(#1F7957, var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem;
+}
+
+nav{
+  justify-content: space-between;
+  width: 20rem;
 }
 
 section{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80vh;
+}
+
+figure{
+  position: relative;
+}
+
+.img-1{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.img-2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+main{
   flex-direction: column;
   justify-content: center;
+  padding-right: 3rem;
+}
+
+div.detail{
+  display: flex;
   align-items: center;
-  min-height: 100vh;
-  padding: 1rem 3rem;
 }
 
-h1{
-  font-size: 3rem;
-  max-width: 18ch;
-  text-align: center;
-  color: #294D50;
+.detail h3{
+  color: var(--secondary);
+  width: max-content;
+  margin-right: 2rem;
 }
 
-p{
-  margin: 1rem 0;
-  max-width: 35vw;
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1.4rem;
-  color: #6B6663;
+.detail p{
+  width: max-content;
+  color: var(--text);
 }
 
-.image-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
+.title{
+  font-size: 2.5rem;
 }
 
-.img-wrapper{
-  border-radius: 0.3rem;
-  overflow: hidden;
+.subtitle{
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  line-height: 1.9rem;
 }
 
-.img-wrapper:nth-child(even){
-  margin-top: 2rem;
+button{
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  margin-right: 2rem;
+  font-size: 1.1rem;
 }
 
-.img-wrapper img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.sign-up-btn{
+  background-image: linear-gradient(to right, #1F7957, var(--secondary));
+  color: white;
+  font-weight: 700;
+}
+
+.detail-btn{
+  background: linear-gradient(to right, #1F7957, var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  position: relative;
+}
+
+.detail-btn:before, 
+.detail-btn:after {
+  content: ' ';
+  position: absolute;
+  border-radius: 99px;
+}
+
+.detail-btn:before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+  background: #503b9a;
+  background: -moz-linear-gradient(left, #1F7957 0%, var(--secondary) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1F7957), color-stop(100%,var(--secondary)));
+  background: -webkit-linear-gradient(left, #1F7957 0%,var(--secondary) 100%);
+  background: -o-linear-gradient(left, #1F7957 0%,var(--secondary) 100%);
+  background: -ms-linear-gradient(left, #1F7957 0%,var(--secondary) 100%);
+  background: linear-gradient(to right, #1F7957 0%,var(--secondary) 100%);;
+}
+
+.detail-btn:after {
+  top: 2px; 
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  background-color: var(--primary);
+  z-index: -1;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
 }
